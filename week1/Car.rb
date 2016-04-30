@@ -1,5 +1,5 @@
 class Car
-
+	attr_accessor :color
 	#initialize 
 	def initialize (my_color , my_sound)
 		@color = my_color
@@ -7,7 +7,7 @@ class Car
 	end	
 
 	#instance Method
-	def honk
+	def make_noise
 		puts "My #{@color} car goes #{@sound}"
 	end
 
@@ -16,11 +16,23 @@ class Car
 	end
 end 	
 
+class RaceCar < Car
+
+	def make_noise
+	puts "My #{@color} car goes #{@sound.upcase}"	
+	end
+	
+end
+
 volvo = Car.new "Yellow", "Volvoooooo"
 mazda = Car.new "Pink", "Mazdaaaaaa"
 honda = Car.new "Purple", "hondaaaaaa"
+ferrari = RaceCar.new "Red", "vroom vroom"
 
-volvo.honk
-mazda.honk
-honda.honk
-honda.honk
+volvo.make_noise
+mazda.make_noise
+
+honda.color = "GREEN"
+honda.make_noise
+
+ferrari.make_noise
