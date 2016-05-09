@@ -8,6 +8,8 @@
 	# hourly
 	# salary
 	# multi
+require_relative('hourlyPayable')
+require_relative('salaryPayable')
 
 class Employee 
 	attr_reader :name, :email
@@ -19,7 +21,7 @@ end
 
 
 class HourlyEmployee < Employee
-
+    include HourlyPayable
 	def initialize(name, email, hourly_rate, hours_worked)
 		super(name, email)
 		@hourly_rate = hourly_rate
@@ -28,14 +30,16 @@ class HourlyEmployee < Employee
 	end
 
 	def calculate_salary 
-		calculate_salary = @hours_worked * @hourly_rate 
-		return calculate_salary
+		calc_payment
+		# calculate_salary = @hours_worked * @hourly_rate 
+		# return calculate_salary
 	end
 
 end
 
 
 class SalariedEmployee < Employee
+	include Salary
 
 	def initialize(name, email, salary)
 		super(name, email)
@@ -44,8 +48,7 @@ class SalariedEmployee < Employee
 	end
 
 	def calculate_salary
-		calculate_salary = @salary/52
-		return calculate_salary
+		calc_payment
 	end
 
 end

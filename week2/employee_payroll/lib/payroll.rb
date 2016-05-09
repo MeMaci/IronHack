@@ -1,4 +1,5 @@
 class Payroll
+	include Salary
 	attr_reader :employee
 	def initialize(employees)
 		@employees = employees
