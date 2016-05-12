@@ -5,31 +5,61 @@
 	# Publish(aka print) all of the posts
 class Blog
 
-	def initialize(post_per_page)
-		@posts = []	
-		@current_page = 2
-		@post_per_page = post_per_page
+	def initialize
+		@posts = []
+		@current_page = 1
+		@post_per_page = 3
 	end
 
-	def add_post(apples)
-		@posts.push(apples)
+	def add_post(post)
+		@posts.push(post)
 	end
 
-	def publish_blog
-		first = (@current_page-1)*3
-		last = first + (@post_per_page-1)
+	# def current_page
+	#   	@current_page
+	# end
 
-		@posts[first..last].each do |x|
-			x.display_posts
+	def publish_front_page
+		puts "Please enter the page number 1 || 2 || 3."
+		@current_page = gets.chomp.to_i
+
+		first = (@current_page -1) *3
+		last = (first + (@post_per_page-1))
+
+		@posts[first..last].each do | post |
+			post.display_post
 		end
-        last_page = (@posts.length / @post_per_page).ceil
-        (1..last_page).each do |num|
-        	puts "#{num}"
-        end
-
 	end
-	def next_page
-		@current_page +=1
-		publish_blog	
+
+	def publish_next_page
+		last_page = (@posts.length.to_f/@posts_per_page).ceil
+		if @current_page == last_page
+			#dont go forward
+			puts "You are on the last page!"
+		else
+			@current_page = @current_page+1
+
+			first = (@current_page - 1) * 3
+			last = (first + (@posts_per_page -1))
+
+			 @posts[first..last].each do | post |
+				post.display_post
+			end
+		end	
+	end
+
+	def publish_prev_page
+		if @current_page == 1
+			puts "You are on the first page"
+		else
+			@current_page == @current_page-1
+
+			first = (@current_page - 1) * 3
+			last = (first + (@posts_per_page -1))
+
+			 @posts[first..last].each do | post |
+				post.display_post
+			end
+		end	
 	end
 end

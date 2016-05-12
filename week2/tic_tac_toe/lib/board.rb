@@ -25,6 +25,7 @@ class Board
 		end
 		# Print the board
 		puts board_container
+		winner?
 	end
 
 	def add_character(location, marker)
@@ -33,4 +34,21 @@ class Board
 
 		@board[y][x] = marker
 	end
+
+	def winner?
+		if horizontal_winner?
+		end
+		if diagonal_winner?
+		end
+		if vertical_winner?
+		end
+	end
+
+	def horizontal_winner?
+		@board.each do | i |
+			if (i[0] == i[1]) && (i[1] == i[2]) && (i[0] != "")
+			puts "You WIN"
+			end
+		end
+	end	
 end

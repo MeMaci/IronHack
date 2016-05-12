@@ -1,6 +1,10 @@
+
+
 class SponsoredPost < Post
-	def initialize(title, date, text)
-		title = "**********#{title}*************"
-		super(title, date, text)
+	#Lets inherit and just override the display method from our post class
+	def initialize(title, time, text)
+		title = "******** #{title} *******"
+		super(title, time, text)
 	end
+
 end

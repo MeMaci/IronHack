@@ -8,19 +8,17 @@
 
 
 class Post
+
 	def initialize(title, date, text)
 		@title = title
 		@date = date
 		@text = text
 	end
 
-	def display_posts
-
-		puts "title : #{@title}, posted on #{@date}"
-		puts "-------------------------------------"	
-
-		puts "text : #{@text}"
-		puts "*************************************"	
-
+	def display_post
+		puts "#{@title}   #{@time}" 
+		puts "*"* @title.length
+		puts "#{@text}"
+		puts "-"* @text.length
 	end
 end

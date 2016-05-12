@@ -3,20 +3,20 @@ require_relative('lib/post')
 require_relative('lib/blog')
 require_relative('lib/sponsored_post')
 
-post = Post.new("This is my first post", Time.now, "Some cool content")
-post1 = SponsoredPost.new("This is my second post", Time.now, "Another cool content")
-post2 = Post.new("This is my third post", Time.now, "Coolest content")
-post3 = Post.new("This is my 4th post", Time.now, "Coolest content")
-post4 = Post.new("This is my 5th post", Time.now, "Coolest content")
-post5 = Post.new("This is my 6th post", Time.now, "Coolest content")
-post6 = Post.new("This is my 7th post", Time.now, "Coolest content")
-post7 = Post.new("This is my 8th post", Time.now, "Coolest content")
-post8 = Post.new("This is my 9th post", Time.now, "Coolest content")
+post0 = Post.new("Monday..time to WORK!", Time.now, "Goodmorning!")
+post1 = SponsoredPost.new("Another week day!", Time.now, "Feeling GOOD!")
+post2 = Post.new("It is time for the excercise", Time.now, "Spinning!")
+post3 = Post.new("Today I want to take it easy..", Time.now, "No MEETINGS")
+post4 = Post.new("Another day in Paradise", Time.now, "Watching TV")
+post5 = Post.new("Weekend yet!", Time.now, "Goodmorning!")
+post6 = Post.new("Hmmm I have nothing to say.", Time.now, "Late again")
+post7 = Post.new("FINALLY weekend...", Time.now, "BEACH")
+post8 = Post.new("Party time!!!", Time.now, "Sabahlar olmasin")
 
 
 
-blog = Blog.new(3)
-blog.add_post(post)
+blog = Blog.new
+blog.add_post(post0)
 blog.add_post(post1)
 blog.add_post(post2)
 blog.add_post(post3)
@@ -26,13 +26,18 @@ blog.add_post(post6)
 blog.add_post(post7)
 
 
-# posts = [post, post1, post2]
+blog.publish_front_page
+puts "\ntype 'next' or 'prev' to go around the blog"
+page_input = gets.chomp
 
-# Print one post
-# puts post.display_posts
-blog.publish_blog
-sleep(5)
-blog.next_page
+if page_input == "next"
+	blog.publish_next_page
+elsif page_input == "prev"
+	blog.publish_prev_page
+else
+	puts "SYSTEM ERROR"
+end
+
 
 
 
