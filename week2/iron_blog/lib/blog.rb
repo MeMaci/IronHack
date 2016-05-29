@@ -29,18 +29,19 @@ class Blog
 		@posts[first..last].each do | post |
 			post.display_post
 		end
+
+		# pagination_section
 	end
 
 	def publish_next_page
-		last_page = (@posts.length.to_f/@posts_per_page).ceil
+		last_page = (@posts.length.to_f/@post_per_page).ceil
 		if @current_page == last_page
 			#dont go forward
 			puts "You are on the last page!"
-		else
 			@current_page = @current_page+1
 
 			first = (@current_page - 1) * 3
-			last = (first + (@posts_per_page -1))
+			last = (first + (@post_per_page -1))
 
 			 @posts[first..last].each do | post |
 				post.display_post
@@ -55,11 +56,28 @@ class Blog
 			@current_page == @current_page-1
 
 			first = (@current_page - 1) * 3
-			last = (first + (@posts_per_page -1))
+			last = (first + (@post_per_page -1))
 
 			 @posts[first..last].each do | post |
 				post.display_post
 			end
 		end	
 	end
+
+	# def pagination_section
+	# 	pagination = ""
+	# 	(1..last_page).each do | page | 
+	# 		if page == @current_page
+	# 			pagination += "#{page} ".colorize(:red)
+	# 		else
+	# 			pagination += "#{page} "
+	# 		end
+	# 	end
+	# 	puts pagination
+	# end
+
+	# def last_page
+	# 	(@posts.length / 3.0).ceil
+	# end
+
 end

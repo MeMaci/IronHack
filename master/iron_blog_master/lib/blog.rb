@@ -17,8 +17,8 @@ class Blog
 	end
 
 	def publish_front_page
-		puts "Welcome to The Ironhack Blog"
-		puts "Use 'next' to go to the next page and 'prev' to go to the previous page."
+		puts "\n\nWelcome to The Ironhack Blog"
+		puts "Use 'next' to go to the next page and 'prev' to go to the previous page.\n\n"
 		sorted_posts = @posts_1.sort do |post_1, post_2|
 			post_1.date <=> post_2.date
 		end
@@ -28,7 +28,7 @@ class Blog
 			puts "--------------------\n\n"
 		end
 		print "1".colorize(:light_blue).underline
-		puts "2"
+		puts "\n2"
 		input = gets.chomp
 		if input == "next"
 			publish_page_two
@@ -46,7 +46,7 @@ class Blog
 			puts "#{post.text}\n"
 			puts "--------------------\n\n"
 		end
-		print "1"
+		print "1\n"
 		puts "2".colorize(:light_blue).underline
 		input = gets.chomp
 		if input == 'prev'

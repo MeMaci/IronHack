@@ -25,14 +25,14 @@ class Board
 		end
 		# Print the board
 		puts board_container
-		winner?
+		# winner?
 	end
 
 	def add_character(location, marker)
 		x = location[1] #2
 		y = location[2] #1
 
-		@board[y][x] = marker
+		@board[y, x] = marker
 	end
 
 	def winner?

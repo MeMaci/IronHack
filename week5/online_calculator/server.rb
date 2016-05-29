@@ -4,31 +4,44 @@ require_relative "lib/calculator"
 calculate = Calculator.new
 
 get "/" do
+  # @result = IO.read("public/result.txt")
  	erb(:home)	
 end
 
 post "/calculate" do
 
-  operation = params["operation"] # => "add", "subtract", "divide", "multiply"
+  @operation = params["operation"] # => "add", "subtract", "divide", "multiply"
 
-  first = params[:first_number].to_i
-  second = params[:second_number].to_i
+  @first = params[:first_number].to_f
+  @second = params[:second_number].to_f
 
   if operation == "add"
-    calculate.calculate_add(first, second)
+      @calculated_value== calculate.calculate_add(first, second)
   elsif operation == "subtract"
-    calculate.calculate_subtract(first, second)
+      @calculated_value== calculate.calculate_subtract(first, second)
   elsif operation == "divide"
-     calculate.calculate_divide(first, second)
+      @calculated_value== calculate.calculate_divide(first, second)
   elsif operation == "multiply"
-     calculate.calculate_multiply(first, second)
+      @calculated_value== calculate.calculate_multiply(first, second)
   end
-    erb(:home)      
+    erb(:calculated_value)      
 end
 
-get "/add" do
-  erb(:add)
+get "/save" do
+  result = params["calculated_value"]
+  IO.write("public/result.txt", result)
+  redirect to("/")
+  erb(:/)
+
 end
+
+post "/add" do
+  result = params["calculated_value"]
+  IO.write("public/result.txt", result)
+  redirect to("/")
+  erb(:/)
+end
+
  post "/calculate_add" do
   first = params[:first_number].to_f
   second = params[:second_number].to_f

@@ -38,8 +38,15 @@ else
 	puts "SYSTEM ERROR"
 end
 
+page_input = gets.chomp
 
-
+if page_input == "next"
+	blog.publish_next_page
+elsif page_input == "prev"
+	blog.publish_prev_page
+else
+	puts "SYSTEM ERROR"
+end
 
 
 
