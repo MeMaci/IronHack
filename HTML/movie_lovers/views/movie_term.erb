@@ -1,4 +1,29 @@
-<% @some_movies.each do | movie |  %>
-	<img src="<%= movie.poster %>" height="100px" width="50px">
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>Which of these movies was filmed in <%= @random_movie.year %>? </h2>
+	<% @some_movies.each do | movie |  %>
+		<% if @random_movie.year == movie.year %>
+		<img src="<%= movie.poster %>" height="100px" width="50px" onClick="alert('yay')"/>
+		<%else%>
+		<img src="<%= movie.poster %>" height="100px" width="50px" onClick="alert('nooooooo')"/>
+		<%end%>
+	<% end %>
+	<h2>Which movie was directed by<%= @director %>? </h2>
+	<% @some_movies.each do | movie |  %>
+		<% if @director == movie.director %>
+		<img src="<%= movie.poster %>" height="100px" width="50px" onClick="alert('heyyyyyyy')"/>
+		<%else%>
+		<img src="<%= movie.poster %>" height="100px" width="50px" onClick="alert('nope.. not this one!'); window.location = '/'"/>
+		<%end%>
+	<%end%>
+</body>
+</html>
+
+
+
 

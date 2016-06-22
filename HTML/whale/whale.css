@@ -1,0 +1,50 @@
+body{
+	font-family: Helvatica, Arial, Sans-Serfi; 
+	color:#333;
+	background-color: #F5F5F5
+}
+
+.img-circle{
+	border-radius: 100%;
+	width: 50px;
+}
+
+.blue{
+	color:#2889D8;
+}
+
+.roboto{
+	font-family: 'Roboto', sans-serif;
+	color:#aaa;
+}
+.small_font{
+		font-size:10px;
+}
+
+.body_font{
+		font-size:15px;
+}
+
+.inline{
+	display: inline-block;
+
+}
+
+.label_container {
+/*	padding-left: 10px;
+	overflow: auto;*/
+	display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    height:90px;
+    width:90px;
+    position: relative;
+    vertical-align: top;
+    background-color:white;
+}
+
+.img{
+    margin-top: -6px;
+    padding-bottom: 0;
+    padding-right: 14px;
+}

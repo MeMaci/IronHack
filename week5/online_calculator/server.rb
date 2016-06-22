@@ -1,5 +1,7 @@
 require "sinatra" 
 require_relative "lib/calculator"
+require "sinatra/reloader" if development?
+require 'pry'
 
 calculate = Calculator.new
 
@@ -10,25 +12,27 @@ end
 
 post "/calculate" do
 
-  @operation = params["operation"] # => "add", "subtract", "divide", "multiply"
+  @operation = params[:operation] # => "add", "subtract", "divide", "multiply"
 
   @first = params[:first_number].to_f
   @second = params[:second_number].to_f
 
-  if operation == "add"
-      @calculated_value== calculate.calculate_add(first, second)
-  elsif operation == "subtract"
-      @calculated_value== calculate.calculate_subtract(first, second)
-  elsif operation == "divide"
-      @calculated_value== calculate.calculate_divide(first, second)
-  elsif operation == "multiply"
-      @calculated_value== calculate.calculate_multiply(first, second)
+  if @operation == "add"
+      @calculated_value = calculate.calculate_add(@first, @second)
+  elsif @operation == "subtract"
+      @calculated_value = calculate.calculate_subtract(@first, @second)
+  elsif @operation == "divide"
+      @calculated_value = calculate.calculate_divide(@first, @second)
+  elsif @operation == "multiply"
+      @calculated_value = calculate.calculate_multiply(@first, @second)
   end
-    erb(:calculated_value)      
+  puts "*" * 25 
+  puts @calculated_value
+    erb(:subtotal)      
 end
 
-get "/save" do
-  result = params["calculated_value"]
+post "/save" do
+  result = params[:subtotal]
   IO.write("public/result.txt", result)
   redirect to("/")
   erb(:/)
@@ -36,7 +40,7 @@ get "/save" do
 end
 
 post "/add" do
-  result = params["calculated_value"]
+  result = params[:subtotal]
   IO.write("public/result.txt", result)
   redirect to("/")
   erb(:/)

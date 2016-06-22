@@ -15,6 +15,8 @@ get "/movie_term" do
 	@input = params[:movie_term]
 	@all_movies = MovieTerm.new(@input)
 	@some_movies = @all_movies.search
+	@random_movie = @some_movies.sample
+	@director = @random_movie.director
 	erb :movie_term
 end
 

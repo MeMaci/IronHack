@@ -1,0 +1,164 @@
+.col-sm-3-m {
+ padding-right: 0px;
+ padding-left: 10px;
+}
+
+.background {
+    background: url("background.jpg")no-repeat;
+    background-size: cover;
+}
+
+.img_size {
+    height: 30px;
+    opacity: 0.7;
+}
+.center_me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float_r {
+    position: relative;
+    top: 10px;
+    right: -100px
+}
+
+.float_l {
+    float: left;
+}
+
+.log_in{
+    background: #3f56e2;
+    border-style: none;
+}
+
+.sign_up {
+    background: #5db248;
+    border-style: none;
+}
+
+.nav_bar_matt {
+    position: relative;
+    height: 32px;
+    background: rgba(128, 128, 128, 0.4);
+}
+
+.seach_styling {
+    width: 50%;
+}
+
+.buttom_r {
+    float: right;
+}
+
+.clear_button {
+    background: rgba(0, 0, 0, 0.0);
+    border-style: none;
+    color: white;
+    font-weight: bold;
+}
+
+.special_button1 {
+    background: green;
+    color: white;
+    border-style: none;
+}
+.special_button2 {
+    background-color: blue;
+    color: white;
+    border-style: none;
+}
+
+.text_style_m {
+    margin-top: 50px; 
+    color: white;
+    font-size: 15px;
+    font-weight:inherit;
+}
+
+.text_style_j {
+    margin-top: 50px; 
+    color: white;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.menu_nav_matt {
+    background-color: grey;
+}
+
+.blog {
+    background-color: #e2e4e6;
+    border-radius: 3px;
+    padding-top: 1px; 
+    padding-bottom: 10px;
+}
+
+.single_post {
+    position: relative;
+    background: white;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0px 2px #cccccc;
+}
+
+.post_text {
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 4px;
+}
+
+h5 {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.post_images {
+    float: auto;
+    width: 100%;
+}
+
+.card_label {
+    float: left;
+    border-radius: 3px;
+    margin-top: 8px;
+    margin-right: 3px;
+    height: 8px;
+    width: 40px;
+}
+
+.labels_container {
+    padding-left: 10px;
+    overflow: auto;
+}
+
+.purpleish {
+    background: #c377e0;
+}
+
+.greenish {
+    background: #51e898;
+}
+
+.pinkish {
+    background: #ff80ce;
+}
+.blueish {
+    background: #00c2e0;
+}
+
+.orangeish {
+    background: #ffab4a; 
+}
+
+.bluer {
+    background: #0079bf;
+}
+
+.post_hover:hover {
+    background: #eaf0f0;
+}

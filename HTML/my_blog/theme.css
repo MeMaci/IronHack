@@ -1,0 +1,16 @@
+html {
+	font-size: 2em;
+	line-height: 1.5;
+	color: black;
+	font-family: "Times New Roman";
+}
+
+.title {
+	color: blue;
+	font-family: "Helvatica";
+}
+
+.blue {
+	width: 50%; /*  relative to its parent element */
+	font-size: 20px; /*  absolute size */
+}

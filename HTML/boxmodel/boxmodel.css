@@ -1,0 +1,30 @@
+.box{
+	width: 100px;
+	height: 150px;
+	background: #654678;
+	box-shadow: 20px 20px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inside_the_box{
+	width: 100px;
+	height: 15px;
+	background: black;
+	padding:20px;
+	margin:10%;
+
+	text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+	color: white;
+	font-family: "Helvatica";
+	box-shadow: 20px 20px 2px 1px rgba(0, 0, 0, 0.2), 20px 20px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bottom_box{
+	width:75px;
+	height: 100px;
+	background: white;
+	padding: 100px;
+	margin:40%;
+	box-shadow: 20px 20px 2px 100px rgba(0, 0, 0, 0.2);
+}
