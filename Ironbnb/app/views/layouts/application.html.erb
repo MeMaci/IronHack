@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ironbnb</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container-fluid">
+
+	<div class="row header">
+
+  		<div class="col-sm-1"><center>
+			<%= link_to " add logo ", '/' %>
+		</center></div>
+
+		<div class="col-sm-6">
+			"Where are you going _____ ?"
+		</center></div>
+
+		<div class="col-sm-1">
+			<%= link_to "Become a Host", help_path %>
+		</center></div>
+
+		<div class="col-sm-1">
+			<%= link_to "Wish Lists", help_path %>	
+		</center></div>
+
+		<div class="col-sm-1">
+				<%= link_to "Help", help_path %>
+		</center></div>
+
+		<div class="col-sm-1">
+				<%= link_to "Sign Up",signup_path %>
+		</center></div>
+
+		<div class="col-sm-1">
+				<%= link_to "Log in", login_path %>
+		</center></div>
+
+	</div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

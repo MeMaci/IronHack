@@ -1,0 +1,13 @@
+<h1>Contacts#index</h1>
+<ul>
+	<% @contacts.each do |contact| %>
+		<li>
+		<%= contact.name %>
+			<% if contact.email.present? %>
+				- <%= contact.email %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>
+
+<p><a href="http://localhost:3000/contacts/new">Add new contact</a></p>
