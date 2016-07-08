@@ -1,0 +1,23 @@
+<% if flash[:notice] = "Successfully created..." %>
+<% end %>
+<h1><%= @user.name %></h1>
+<h2><%= flash[:sucess] %></h2>
+<ol>
+	<% @products.each do |product| %>
+	<li>
+		Title:
+		<%= product.title %>
+		<br>
+		Description:
+		<%= product.description %>
+		<br>
+		Deadline
+		<%= product.deadline %>
+		<br>
+		<%=link_to "Delete", user_product_path(@user, product), method: :delete, data: { confirm: "Are you sure"} %>
+	</li>
+	<% end %>
+	<br>
+		<h3><%=link_to "ADD PRODUCT", new_user_product_path(@user) %></h3>
+	<br>
+</ol>

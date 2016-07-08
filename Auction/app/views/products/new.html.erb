@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auction site</title>
+</head>
+<body>
+    <%= form_for [@user, @product] do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <br>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <br>
+        <%= f.label :deadline %>
+        <%= f.date_field :deadline %>
+        <br>
+        <%= f.submit 'Save' %>
+        <%= link_to 'Cancel', user_products_path(@user) %>
+
+    <% end %>
+
+
+</body>
+</html>
