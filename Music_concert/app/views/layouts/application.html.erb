@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concert</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %> 
+</head>
+<body>
+	<head>
+		<center><h1><%=link_to("Music Concert Network", '/')%></h1></center>
+	</head>
+
+
+<%= yield %>
+<!-- THIS TO SHOW PARTIAL -->
+<!-- 	<%#=render 'concerts/footer'%> -->
+
+	<footer>
+    <center><p><%= link_to("Concerts", concerts_path) %> | <%= link_to("New Concert", new_concert_path) %></p></center>
+ 	</footer>
+
+</body>
+</html>

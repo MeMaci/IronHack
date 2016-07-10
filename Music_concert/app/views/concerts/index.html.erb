@@ -1,0 +1,14 @@
+
+<h1>Concerts#index</h1>
+<p>Find me in app/views/concerts/index.html.erb</p>
+
+<ul>	
+	<% @concerts.each do |concert| %>
+		<li>
+		<%= link_to concert.artist, concert_path(concert) %>
+			<% if concert.artist.present? %>
+				- <%= concert.artist %>
+			<% end %>
+		</li>
+	<% end %>	
+</ul>

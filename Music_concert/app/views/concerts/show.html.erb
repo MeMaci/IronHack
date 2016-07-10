@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Concert Network</title>
+</head>
+<body>
+<div class="container-fluid">
+
+ <div class="row">
+
+    <div class="col-sm-12">
+
+		<h5>Artist :<%= @concert.artist %>
+		<br>Venue : <%= @concert.venue %>
+		<br>City: <%= @concert.city %>
+		<br>Ticket Price:<%= @concert.price %>
+		<br>Ready To:<%= @concert.description %>
+	</h5>
+	</div>
+</div>
+
+<div class="col-sm-12">
+    <h4>Comments:</h4>
+	<% @comments.each do |comment_concert| %>
+	 <span class="comment">
+		<li>
+			<% if comment_concert.present? %>
+				- <%= comment_concert.comment %>
+			<% end %>
+		</li>
+	</span>
+	<% end %>	
+</div>
+</div>
+</body>
+</html>
+
+<%=link_to("Add Comment", new_concert_comment_path(@concert))%>
