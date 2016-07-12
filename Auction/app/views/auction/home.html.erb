@@ -1,0 +1,10 @@
+<h1>Wellcome to Miami Beach Auction</h1>
+<p>Auction started. Make the best BID <%=Time.new %> : </p>
+
+<% @products.each do |product|%>
+<li>
+<%= product.title %> - <%=link_to 'BID', new_product_bid_path(product)%>
+</li>
+<% end %>
+
+

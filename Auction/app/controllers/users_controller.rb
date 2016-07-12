@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
-	def show
-		begin
-			@user = User.find(params[:id])
-		rescue ActiveRecord::RecordNotFound
-			# redirect_to '/projects' or
-			render 'no_project_found'
-		end
+def index
+	@users = User.all
 	
+end
+
+	def show
+		@user = User.find(params[:id])
 	end
 
 	def new
@@ -20,7 +19,7 @@ class UsersController < ApplicationController
 			)
 		@user.save
 
-		redirect_to new_user_product_path(@user)
+		redirect_to user_path(@user)
 	end
 
 end

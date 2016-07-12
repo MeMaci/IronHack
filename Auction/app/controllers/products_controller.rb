@@ -16,10 +16,10 @@ class ProductsController < ApplicationController
 	end
 
 	def create
-		@user = User.find_by(params[:user_id])
+		@user = User.find(params[:user_id])
 		@product = @user.products.new(product_params)
 		if @product.save
-			redirect_to user_products_path(@user)
+			redirect_to user_products_path(@user), notice: "Product was created sucessfully"
 		else
 			render 'new'
 		end

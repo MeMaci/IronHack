@@ -1,0 +1,14 @@
+<ul>
+	<% @users.each do |user| %>
+	<li>
+		<%#=link_to user.name, user_products_path(user) %>
+			<%# if user.products.present? %>
+			<!-- - <%#= user.product.title %> -->
+			<%# end %>
+			Name:
+			<%= user.name %>
+			Email:
+			<%= user.email %>
+	</li>
+	<% end %>
+</ul>
