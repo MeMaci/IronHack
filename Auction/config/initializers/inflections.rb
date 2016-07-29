@@ -1,3 +1,3 @@
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.uncountable %w( bid )
+  # inflect.uncountable %w( bid )
 end

@@ -3,9 +3,6 @@
 	<% @contacts.each do |contact| %>
 		<li>
 		<%= contact.name %>
-			<% if contact.email.present? %>
-				- <%= contact.email %>
-			<% end %>
 		</li>
 	<% end %>
 </ul>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h5>THE BEST BID GETS THE BEST PRODUCT</h5>
+	<%= form_for [@product, @bid] do |f| %>
+	    <%= f.label :user_id %>
+        <%= f.number_field :user_id %>
+        <br>
+       	<%= f.label :product_id %>
+        <%= f.number_field :product_id %>
+        <br>
+        <%= f.label :amount %>
+        <%= f.number_field :amount %>
+        <br>
+        <%= f.submit 'Save' %>
+  	<% end %>
+</body>
+</html>

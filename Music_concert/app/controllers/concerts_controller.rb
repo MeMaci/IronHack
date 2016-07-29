@@ -3,9 +3,9 @@ class ConcertsController < ApplicationController
 		@concerts = Concert.today
 		@concerts_this_month = Concert.this_month
 	end
+  
   def index
   	@concerts = Concert.all
-
   end
 
   def new
@@ -23,12 +23,10 @@ class ConcertsController < ApplicationController
   		)
   		@concert.save
   		redirect_to concerts_path
-
   end
 
   def show
   	@concert = Concert.find(params[:id])
   	@comments = @concert.comments.all
-
   end
 end

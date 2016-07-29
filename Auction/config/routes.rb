@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :new, :show, :index] do
     resources :products
   end
+
   resources :products do
-  	resources :bids, :controller => 'bid'
+  	resources :bids
   end
 
 end
+
+  	# resources :bids , :controller => 'bid'
