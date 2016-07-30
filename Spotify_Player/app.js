@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$('.js-artist-form').on("submit",function(event){
 		event.preventDefault();
+
 		var searchTerm = $(".js-artist-input").val();
 
 		$.ajax({
@@ -10,7 +11,42 @@ $(document).ready(function() {
 			error: artistError,
 		})
 	})
+	$('.js-artist-list').on('click','.artist-li', function(event){
+		var artistId = $(event.currentTarget).data('artist-id');
+		var artistName = $(event.currentTarget).data('artist-name');
+
+		$.ajax({
+			url: `http://api.spotify.com/v1/artists/${artistId}/albums`,
+			success: function(response){
+				showAlbums(response, artistName);
+			},
+			error: albumError
+		})
+		//Use data attribute to get artist id out of LI
+	})
+
 })
+
+function showAlbums(response, artistName){
+	$('.modal-artist-name').text(artistName);
+	var albums = response.items;
+	albums.forEach(appendAlbum);
+	$('.modal').modal('show');
+	console.log(albums)
+}
+
+function appendAlbum(album){
+	var html =`
+	<li class="album-li">
+	 ${album.name}
+	</li>
+	`
+	$('.modal-artist-name').append(html);
+}
+
+function albumError(err){
+	console.log(err);
+}
 
 function showArtists(response){
 	console.log("Response", response);
@@ -29,7 +65,7 @@ function appendArtist(artist){
 		}
 
 	var html = `
-		<li>
+		<li class="artist-li" data-artist-id=${artist.id} data-artist-name=${artist.name}>
 			<h3>${artist.name}</h3>
 			<img src=${artistImage}>
 		</li>
