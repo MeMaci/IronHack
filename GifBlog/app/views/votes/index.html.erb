@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+<ol>
+	<% @votes.each do |vote| %>
+	VOTES:
+	<% link_to "ADD VOTE", edit_post_vote_path(@post, vote) %>
+	<% end %>
+</ol>

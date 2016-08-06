@@ -1,0 +1,20 @@
+<h4>Title of the post : <%= @post.title %></h4>
+
+<!-- OR action="/posts/<%=@post.id %>/upvote" -->
+<form action='<%= post_upvote_path(@post.id) %>' method='POST' >
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+<button name="button" type="submit">UpVote</button>
+</form>
+
+<form action='<%= post_downvote_path(@post.id) %>' method='POST' >
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+<button name="button" type="submit">DownVote</button>
+</form>
+
+<strong>Vote Counter : </strong><%=@post.nov%>
+
+<p><img src="<%= @post.gif_url%>"></p>
+<!-- YOU CAN ALSO CREATE THE IMG TAG IN ERB -->
+<!-- <%= image_tag(@post.gif_url) %> -->
