@@ -1,10 +1,23 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
 
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 nav ul a,
 nav .brand-logo {
   color: #444;
+}
+
+.main-logo {
+  width: 172px;
+  height: 64px;
+}
+
+a .logo {
+  color: #42a5f5;
 }
 
 p {
