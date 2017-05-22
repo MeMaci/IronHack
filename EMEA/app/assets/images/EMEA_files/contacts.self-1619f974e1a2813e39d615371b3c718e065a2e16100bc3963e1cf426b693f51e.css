@@ -1,0 +1,37 @@
+/* line 5, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/contacts.scss */
+.hidden {
+  display: none;
+}
+
+/*flash*/
+/* line 9, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/contacts.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 16, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/contacts.scss */
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 23, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/contacts.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+/* line 30, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/contacts.scss */
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}

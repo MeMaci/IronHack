@@ -1,0 +1,61 @@
+/* line 5, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+/* line 10, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+p {
+  line-height: 2rem;
+}
+
+/* line 14, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+.button-collapse {
+  color: #26a69a;
+}
+
+/* line 20, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 26, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 31, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  /* line 35, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+  #index-banner .section {
+    top: 10%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 41, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+  #index-banner .section {
+    top: 0;
+  }
+}
+/* line 46, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+.icon-block {
+  padding: 0 15px;
+}
+
+/* line 49, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+/* line 53, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/welcome.scss */
+footer.page-footer {
+  margin: 0;
+}

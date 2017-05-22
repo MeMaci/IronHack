@@ -1,62 +1,37 @@
-<div align="center">
-  <h3>Send A message to Us</h3>
 
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-    <%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :message, :as => :text, :required => true %>
-    <div class= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-    </div>
-    <div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-    </div>
-  <% end %>
-</div>
-<!-- ?????????????????????????? -->
-<!-- <div class="container">
+<div class="container">
     <div class="row">
         <div class="col m10 offset-m1 s12">
             <h2 class="center-align">Contact Us</h2>
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Last Name</label>
-                        </div>
+                <%= simple_form_for @contact, :html => {:class => 'col s12' } do |f| %>
+                <div class="row">
+                    <div class="input-field col m6 s12">
+                        <%= f.input :name, :required => true, :class => "validate", :id => "first_name" %>
                     </div>
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <i class="mdi-content-mail prefix"></i>
-                            <input id="email" type="email" class="validate" required>
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <i class="mdi-maps-store-mall-directory prefix"></i>
-                            <input id="company" type="text" class="validate">
-                            <label for="company">Company</label>
-                        </div>
+                    <div class="input-field col m6 s12">
+                        <%= f.input :email, :required => true %>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                          <textarea id="message" class="materialize-textarea"></textarea>
-                          <label for="message">Message</label>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12 s12">
+                        <%= f.input :message, :as => :text, :required => true %>
                     </div>
+                    <div class= "hidden">
+                        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+                    </div>
+                </div>
+                <div>
 
                     <div class="row">
-                        <div class="col m12">
-                         <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action">Send Message</button></p>
+                        <div class="col m6">
+                             </br>
+                                <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
                         </div>
                     </div>
-                </form>
+                <% end %>
             </div>
         </div>
     </div>
-</div> -->
+</div>
+

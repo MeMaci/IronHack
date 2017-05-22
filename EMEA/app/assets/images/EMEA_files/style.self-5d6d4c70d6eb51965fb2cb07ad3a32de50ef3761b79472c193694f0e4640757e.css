@@ -1,0 +1,79 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+/* line 10, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+/* line 15, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+.main-logo {
+  width: 172px;
+  height: 64px;
+}
+
+/* line 20, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+a .logo {
+  color: #42a5f5;
+}
+
+/* line 24, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+p {
+  line-height: 2rem;
+}
+
+/* line 28, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+.button-collapse {
+  color: #26a69a;
+}
+
+/* line 32, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 38, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 43, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  /* line 47, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+  #index-banner .section {
+    top: 10%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 53, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+  #index-banner .section {
+    top: 0;
+  }
+}
+/* line 58, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+.icon-block {
+  padding: 0 15px;
+}
+
+/* line 61, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+/* line 65, /Users/melike/work/ironhack/EMEA/app/assets/stylesheets/style.scss */
+footer.page-footer {
+  margin: 0;
+}

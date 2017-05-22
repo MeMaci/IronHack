@@ -8,6 +8,8 @@ end
 gem 'materialize-sass'
 gem 'devise'
 
+gem 'figaro'
+
 gem 'mail_form'
 gem 'simple_form'
 
